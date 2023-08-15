@@ -6,8 +6,6 @@ import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 const Login = () => {
-	// const [err, setErr] = useState(false);
-
 	const router = useRouter();
 	const session = useSession();
 
@@ -45,7 +43,18 @@ const Login = () => {
 				/>
 				<button className={styles.button}>Login</button>
 			</form>
-			<button onClick={() => signIn("google")}>Login with Google</button>
+			<button className={styles.google} onClick={() => signIn("google")}>
+				Login with Google
+			</button>
+
+			<div className={styles.registerContainer}>
+				<div className={styles.question}>Not Registered?</div>
+				<button
+					className={styles.button}
+					onClick={() => router.push("/dashboard/register")}>
+					Register
+				</button>
+			</div>
 		</div>
 	);
 };

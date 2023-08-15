@@ -33,3 +33,14 @@
 	color: #eee;
 	font-weight: bold;
 }
+
+.google {
+	cursor: pointer;
+}
+
+.registerContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+}
