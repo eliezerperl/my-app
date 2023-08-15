@@ -32,3 +32,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+##Connecting to DB with .env file
+
+Create .env file and add the mongoDb driver connection string
+
+##Adding Authentication
+
+In you .env file add variables for:
+NEXTAUTH_SECRET (this can be whatever you want)
+NEXTAUTH_URL (You base website URL)
+
+FOR GOOGLE AUTH:
+Go to cloud.google.com --> console --> APIs & services --> Credentials --> +CREATE CREDENTIAL --> create and you will receive these: (add to .env file)
+GOOGLE_CLIENT_ID
+GOOGLE_CLIENT SECRET
