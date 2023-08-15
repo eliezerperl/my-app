@@ -4,7 +4,6 @@ import React, { useRef, useState } from "react";
 import styles from "./page.module.css";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PasswordInput from "@/components/password/PasswordInput";
 
 const Login = () => {

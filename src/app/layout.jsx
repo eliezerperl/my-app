@@ -1,31 +1,35 @@
-import Navbar from '@/components/navbar/Navbar'
-import './globals.css'
-import { Inter } from 'next/font/google'
-import Footer from '@/components/footer/Footer'
-import { ThemeProvider } from '@/context/ThemeContext'
+import Navbar from "@/components/navbar/Navbar";
+import "./globals.css";
+import { Inter } from "next/font/google";
+import Footer from "@/components/footer/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
 import AuthProvider from "../components/AuthProvider/AuthProvider";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
-const inter = Inter({ subsets: ['latin'] })
+library.add(faEye, faEyeSlash);
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Home',
-  description: 'Website Homepage',
-}
+	title: "Home",
+	description: "Website Homepage",
+};
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider>
-          <AuthProvider>
-          <div className='container'>
-            <Navbar/>
-              {children}
-            <Footer/>
-          </div>
-          </AuthProvider>
-        </ThemeProvider>
-      </body>
-    </html>
-  )
+	return (
+		<html lang="en">
+			<body className={inter.className}>
+				<ThemeProvider>
+					<AuthProvider>
+						<div className="container">
+							<Navbar />
+							{children}
+							<Footer />
+						</div>
+					</AuthProvider>
+				</ThemeProvider>
+			</body>
+		</html>
+	);
 }
