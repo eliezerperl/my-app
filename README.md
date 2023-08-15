@@ -5,8 +5,8 @@ Create .env file and add the mongoDb driver connection string to a variable
 
 ## Adding Authentication
 
-In you .env file add variables for:
-NEXTAUTH_SECRET (this can be whatever you want)
+In you .env file add variables for: <br>
+NEXTAUTH_SECRET (this can be whatever you want)  
 NEXTAUTH_URL (You base website URL)
 
 FOR GOOGLE AUTH:
