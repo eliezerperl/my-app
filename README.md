@@ -11,5 +11,5 @@ NEXTAUTH_URL (You base website URL)
 
 FOR GOOGLE AUTH:
 Go to cloud.google.com --> console --> APIs & services --> Credentials --> +CREATE CREDENTIAL --> create and you will receive these: (add to .env file)
-GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_ID <br>
 GOOGLE_CLIENT SECRET
