@@ -35,7 +35,20 @@
 }
 
 .google {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	border-radius: 5px;
 	cursor: pointer;
+}
+
+.googleIcon {
+	margin-right: 20px;
+}
+
+.googleText {
+	flex: 1; /* Takes up remaining space */
+	text-align: center; /* Center the text horizontally */
 }
 
 .registerContainer {

@@ -5,13 +5,15 @@ import styles from "./page.module.css";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import PasswordInput from "@/components/password/PasswordInput";
+import LoadingSpinner from "@/components/loadingSpinner/LoadingSpinner";
+import Image from "next/image";
 
 const Login = () => {
 	const router = useRouter();
 	const session = useSession();
 
 	if (session.status === "loading") {
-		return <p>Loading...</p>;
+		return <LoadingSpinner />;
 	}
 
 	if (session.status === "authenticated") {
@@ -39,8 +41,16 @@ const Login = () => {
 				<PasswordInput />
 				<button className={styles.button}>Login</button>
 			</form>
-			<button className={styles.google} onClick={() => signIn("google")}>
-				Login with Google
+			<button
+				className={`${styles.google} ${styles.button}`}
+				onClick={() => signIn("google")}>
+				<Image
+					src="/google_icon.png"
+					width={20}
+					height={20}
+					className={styles.googleIcon}
+				/>
+				<span className={styles.googleText}>Login with Google</span>
 			</button>
 
 			<div className={styles.registerContainer}>
