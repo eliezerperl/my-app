@@ -4,6 +4,10 @@
 	background-color: #53c28b;
 	border: none;
 	border-radius: 3px;
-	width: max-content;
 	color: white;
+	width: 100%;
+}
+
+.container:hover {
+	background-color: rgba(0, 0, 0, 0.7);
 }

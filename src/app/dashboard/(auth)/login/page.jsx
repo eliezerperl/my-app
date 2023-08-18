@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import PasswordInput from "@/components/password/PasswordInput";
 import LoadingSpinner from "@/components/loadingSpinner/LoadingSpinner";
 import Image from "next/image";
+import Button from "@/components/Button/Button";
 
 const Login = () => {
 	const router = useRouter();
@@ -41,25 +42,26 @@ const Login = () => {
 				<PasswordInput />
 				<button className={styles.button}>Login</button>
 			</form>
-			<button
-				className={`${styles.google} ${styles.button}`}
-				onClick={() => signIn("google")}>
-				<Image
-					src="/google_icon.png"
-					width={20}
-					height={20}
-					className={styles.googleIcon}
-				/>
-				<span className={styles.googleText}>Login with Google</span>
-			</button>
-
-			<div className={styles.registerContainer}>
-				<div className={styles.question}>Not Registered?</div>
+			<div className={styles.otherMethods}>
 				<button
-					className={styles.button}
-					onClick={() => router.push("/dashboard/register")}>
-					Register
+					className={`${styles.google} ${styles.button}`}
+					onClick={() => signIn("google")}>
+					<Image
+						src="/google_icon.png"
+						width={20}
+						height={20}
+						className={styles.googleIcon}
+					/>
+					<span className={styles.googleText}>Login with Google</span>
 				</button>
+				<div className={styles.registerContainer}>
+					<div className={styles.question}>Not Registered?</div>
+					<Button
+						className={styles.button}
+						url="/dashboard/register"
+						text="Register"
+					/>
+				</div>
 			</div>
 		</div>
 	);

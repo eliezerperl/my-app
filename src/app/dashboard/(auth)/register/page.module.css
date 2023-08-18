@@ -24,7 +24,6 @@
 }
 
 .button {
-	width: 300px;
 	padding: 20px;
 	cursor: pointer;
 	background-color: #53c28b;
@@ -32,4 +31,12 @@
 	border-radius: 5px;
 	color: #eee;
 	font-weight: bold;
+}
+
+.button:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btnContainer {
+	width: 300px;
 }

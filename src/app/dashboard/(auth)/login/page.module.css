@@ -1,13 +1,19 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 40px;
 	align-items: center;
 	justify-content: center;
 }
 
 .form {
 	width: 300px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.otherMethods {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -34,8 +40,13 @@
 	font-weight: bold;
 }
 
+.button:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
 .google {
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	padding: 10px 20px;
 	border-radius: 5px;
@@ -43,12 +54,11 @@
 }
 
 .googleIcon {
-	margin-right: 20px;
+	margin-right: 30px;
 }
 
 .googleText {
-	flex: 1; /* Takes up remaining space */
-	text-align: center; /* Center the text horizontally */
+	margin-right: 30px;
 }
 
 .registerContainer {

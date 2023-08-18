@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import PasswordInput from "@/components/password/PasswordInput";
+import Button from "@/components/Button/Button";
 
 const Register = () => {
 	const [err, setErr] = useState(false);
@@ -56,7 +57,13 @@ const Register = () => {
 				<button className={styles.button}>Register</button>
 			</form>
 			{err && "Something went wrong!"}
-			<Link href="/dashboard/login">Login from an existing account</Link>
+			<div className={styles.btnContainer}>
+				<Button
+					url="/dashboard/login"
+					text="Login from an existing account"
+					className={styles.button}
+				/>
+			</div>
 		</div>
 	);
 };
