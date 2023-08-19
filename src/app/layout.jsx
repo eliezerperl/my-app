@@ -4,8 +4,6 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/footer/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
 import AuthProvider from "../components/AuthProvider/AuthProvider";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faEye, faEyeSlash);
 
