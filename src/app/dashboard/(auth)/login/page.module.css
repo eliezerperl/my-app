@@ -6,6 +6,11 @@
 	justify-content: center;
 }
 
+.errMsg {
+	text-align: center;
+	color: red;
+}
+
 .form {
 	width: 300px;
 	display: flex;

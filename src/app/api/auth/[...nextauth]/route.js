@@ -29,10 +29,10 @@ const handler = NextAuth({
             if (isPasswordCorrect) {
               return user;
             } else {
-              throw new Error("Wrong Credentials!");
+              throw new Error("Password and/or Email are/is incorrect.");
             }
           } else {
-            throw new Error("User not found!");
+            throw new Error("Email and/or Password are/is incorrect.");
           }
         } catch (err) {
           throw new Error(err);
