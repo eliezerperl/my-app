@@ -51,6 +51,7 @@ const Login = () => {
 					onClick={() => signIn("google")}>
 					<Image
 						src="/google_icon.png"
+						alt=""
 						width={20}
 						height={20}
 						className={styles.googleIcon}
