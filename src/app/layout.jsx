@@ -5,8 +5,6 @@ import Footer from "@/components/footer/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
 import AuthProvider from "../components/AuthProvider/AuthProvider";
 
-library.add(faEye, faEyeSlash);
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
