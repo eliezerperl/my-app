@@ -29,6 +29,7 @@ const Login = () => {
 		const email = e.target[0].value;
 		const password = e.target[1].value;
 
+		router.push("elisnextapi.netlify.app/api/auth/signin");
 		signIn("credentials", { email, password });
 	};
 
