@@ -18,11 +18,10 @@ const Register = () => {
 		const password = e.target[2].value;
 
 		debugger;
-		router.push("/");
 
 		try {
 			const res = await fetch(
-				"https://elisnextapi.netlify.app//api/auth/register",
+				"https://elisnextapi.netlify.app/api/auth/register",
 				{
 					method: "POST",
 					headers: {
