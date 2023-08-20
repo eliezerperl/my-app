@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import styles from "./page.module.css";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import PasswordInput from "@/components/password/PasswordInput";
 import Button from "@/components/Button/Button";
