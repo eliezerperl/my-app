@@ -17,18 +17,24 @@ const Register = () => {
 		const email = e.target[1].value;
 		const password = e.target[2].value;
 
+		debugger;
+		router.push("/");
+
 		try {
-			const res = await fetch("elisnextapi.netlify.app/api/auth/register", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					name,
-					email,
-					password,
-				}),
-			});
+			const res = await fetch(
+				"https://elisnextapi.netlify.app//api/auth/register",
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						name,
+						email,
+						password,
+					}),
+				}
+			);
 
 			res.status === 201 &&
 				router.push("/dashboard/login?success=Account has been created");
